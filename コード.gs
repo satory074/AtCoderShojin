@@ -36,7 +36,8 @@ function doGet(e) {
   // Get all tasks
   var tasks = getJSON('https://kenkoooo.com/atcoder/resources/problem-models.json');
 
-  if (e.parameters["user"]){
+  // if (e.parameters["user"]){
+  if (true){
     // Get user's participant contests
     var contests = getJSON(`https://atcoder.jp/users/${e.parameters["user"]}/history/json`);
 
@@ -58,9 +59,11 @@ function doGet(e) {
     // Extract user's AC tasks
     for (key in submitted_tasks){
       if (submitted_tasks[key]["result"] == "AC") {
-        ac_tasks[key] = submitted_tasks[key];
+        ac_tasks[submitted_tasks[key]["problem_id"]] = submitted_tasks[key];
       }
     }
+    console.log(ac_tasks);
+
     
     // Set variance
     if (e.parameters["upper"] && e.parameters["lower"]){
