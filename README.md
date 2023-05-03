@@ -13,7 +13,7 @@ user = "satory074"
 lower = -100
 upper = 100
 
-url = f"https://script.google.com/macros/s/AKfycbx_twCi0cHMeL4Amq-fWwkaJljIKdowxOAhAOhQgzaSATQDLinis0TZzPqkvMa0lhB7/exec?user={user}&lower={lower}&upper={upper}"
+url = f"https://script.google.com/macros/s/AKfycby5PvFQAa4W8m812NVFcjx1sQGKPQ2QUnFr1RLtL7I-JczdDrq_5XvnTJoJIGQtbco0/exec?user={user}&lower={lower}&upper={upper}"
 response = requests.get(url)
 data = response.json()
 
@@ -28,3 +28,6 @@ print(data)
 - Pairs of Contests and Problems
 - User Submissions
 - Estimated Difficulties of the Problems
+
+## [algon-320](https://github.com/algon-320/Kyopro-Ratings)
+- Kyopro-Ratings
